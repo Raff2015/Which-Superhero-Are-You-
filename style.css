@@ -1,0 +1,53 @@
+/*  Fonts:
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Oswald', sans-serif;
+
+    Colors: 
+    
+*/
+
+body {
+    font-family:'Oswald', sans-serif;
+    background-color: #A4BECC;
+    color: #044466;
+    background-image: url(images/X2EtyO.png); 
+}
+
+#wrapper {
+    background-color: rgba(255,255,255, .8);
+    margin-top: 10px;
+    padding-top:8px;
+    height: 700px;
+}
+
+header {
+    text-align: center;
+    font-size:24px;
+}
+
+header > p {
+    margin-top: 0px;
+}
+
+header > h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+#content-left {
+    float: left;
+    width: 40%;
+    margin-left: 3.3333%;
+}
+
+#content-right {
+    float:left;
+    width: 40%;
+    margin-left:3.3333%;
+    text-align:center;
+}
+
+.hidden {
+    display:none;
+}
