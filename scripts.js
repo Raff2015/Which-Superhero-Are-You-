@@ -7,53 +7,56 @@
         
         function calculateHero(event) {
             event.preventDefault();
+        
             
-            
-             var nameLength = document.getElementById('name-input').value.length,
-                monthValue = Number(document.getElementById('bmonth').value),
-                dayValue = Number(document.getElementById('bday').value),
-                totalValue = nameLength + monthValue + dayValue; 
-            
-            if (document.getElementById('bmonth').value === 'Select month') {
+            if (document.getElementById('bmonth').value == "Select month") {
+                console.log('works1')
                 
                 alert('Please select the month of your birthday.');
-                
-                monthValue = 0;
-                
-                document.getElementById('bmonth').focus();
+            } else {
+                var monthValue = Number(document.getElementById('bmonth').value);
             }
             
-            else if (document.getElementById('bday').value === 'Select day') {
+            
+            if (document.getElementById('bday').value == "Select day") {
+                console.log('works2')
+                
                 alert('Please select the day of your birthday.')
+            } else {
+                var dayValue = Number(document.getElementById('bday').value);
+            }
+            
+            
+            if (document.getElementById('name-input').value.length == 0) {
+                console.log('works3')
                 
-                dayValue = 0;
-                
-                document.getElementById('bday').focus();
-            } 
+                alert('Please enter your first name.')
+            } else {
+                var nameLength = document.getElementById('name-input').value.length;
+            }
+            
+            var totalValue = nameLength + dayValue + monthValue;
             
           
-            if (totalValue < 15) {
+            if (totalValue > 0) {
                 document.getElementById('ironman').className=""
-            } else if (15 < totalValue < 20) {
+            } else if (totalValue > 15) {
                 document.getElementById('thor').className=""
-            } else if (20 < totalValue < 25){
+            } else if (totalValue > 20){
                 document.getElementById('batman').className=""
-            } else if (25 < totalValue < 30){
+            } else if (totalValue > 35){
                 document.getElementById('captainamerica').className=""
-            } else if (30 < totalValue < 35){
+            } else if (totalValue > 30){
                 document.getElementById('flash').className=""
-            } else if (35 < totalValue < 40){
+            } else if (totalValue > 35){
                 document.getElementById('greenlantern').className=""
-            } else if (40 < totalValue < 48){
+            } else if (totalValue > 40){
                 document.getElementById('hulk').className=""
-            } else if (48 < totalValue < 56){
+            } else if (totalValue > 48){
                 document.getElementById('superman').className=""
             } else if (totalValue > 56){
                 document.getElementById('wonderwoman').className=""
-            } else if (totalValue == 0){
-                alert('Please enter your information')
             }
-            
     }})
     
 })();
